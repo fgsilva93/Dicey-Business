@@ -1,32 +1,41 @@
-const numMax = 500; 
+const numMax = 800;
 
 let container = document.getElementById('square-container');
 
-let button = document.getElementById('btn'); 
-button.addEventListener('click', makingSq)
+let button = document.getElementById('btn');
+button.addEventListener('click', makingSq);
 
-function makingSq () {
-    let xVal = randomVal(0,numMax); 
-    let yVal = randomVal(0,numMax);
-    let sq = new Dice(xVal, yVal); 
+function makingSq() {
+    let xVal = randomVal(0, numMax);
+    let yVal = randomVal(0, numMax);
+    let sq = new Dice(xVal, yVal);
 }
 
-//let counter = 1; 
 class Dice {
-    constructor(x, y) {
+    constructor(value) {
         this.div = document.createElement('div');
         this.div.classList.add('square');
-        //this.value = document.createTextNode(counter);
+        //this.div.style.left = `${valueX}px`;
+        //this.div.style.top = `${valueY}px`;
         container.append(this.div);
         this.rolling()
         console.log(this);
-        // this.div.addEventListener('click', ()=> {
-        //     this.div.append('div');
-        // })
+        let button2 = document.getElementById('btn2')
+            button2.addEventListener('click', () => {
+                this.updateRolling();
+            })
     }
 
     rolling() {
-        this.div.innerHTML = randomVal(1,6); 
+        this.div.innerHTML = randomVal(1, 6);
+    }
+
+    updateRolling() {
+        // let xVal = randomVal(0, numMax);
+        // let yVal = randomVal(0, numMax);
+        // this.div.style.left = `${xVal}px`;
+        // this.div.style.top = `${yVal}px`;
+        this.div.innerHTML = randomVal(1, 6);
     }
 }
 

@@ -1,7 +1,16 @@
 .square {
+    /* position: absolute; */
     height: 100px;
     width: 100px;
     border: solid black;
-    margin: 2px;
+    margin: 4px;
     text-align: center;
+    align-items: center;
+    display: flex;
+    float: left;
+    justify-content: center;
+}
+
+#sqaure-container {
+   
 }
