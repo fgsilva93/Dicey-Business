@@ -9,8 +9,5 @@
     display: flex;
     float: left;
     justify-content: center;
-}
-
-#sqaure-container {
-   
+    cursor: pointer;
 }
