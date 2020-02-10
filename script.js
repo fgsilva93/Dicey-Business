@@ -21,12 +21,12 @@ class Dice {
         this.div.classList.add('square');
         divContainer.append(this.div);
         this.rolling()
-        this.updateColor();
+        // this.updateColor();
         console.log(this);
         let button2 = document.getElementById('btn2')
         button2.addEventListener('click', () => {
             this.updateRolling();
-            this.updateColor();
+            // this.updateColor();
         })
     }
 
@@ -38,9 +38,9 @@ class Dice {
         this.div.innerHTML = randomVal(1, 6);
     }
 
-    updateColor() {
-        let randomColor = `rgb(${randomVal(0, 255)}, ${randomVal(0, 255)}, ${randomVal(0, 255)})`;
-        this.div.style.backgroundColor = randomColor;
-    }
+    // updateColor() {
+    //     let randomColor = `rgb(${randomVal(0, 255)}, ${randomVal(0, 255)}, ${randomVal(0, 255)})`;
+    //     this.div.style.backgroundColor = randomColor;
+    // }
 
 }
